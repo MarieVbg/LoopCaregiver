@@ -198,7 +198,7 @@ platform :ios do
   end
 
   desc "Provision Caregiver Certificate"
-  lane :caregiver_cert do
+  lane :certs do
     setup_ci if ENV['CI']
     ENV["MATCH_READONLY"] = false.to_s
     
