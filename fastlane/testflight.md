@@ -100,7 +100,7 @@ A private Match-Secrets repository is automatically created under your GitHub us
     * `MATCH_PASSWORD`
 1. If you are using an organization, do this step at the organization level, e.g., username-org. If you are not using an organization, do this step at the repository level, e.g., username/LoopCaregiver:
     * Go to Settings -> Secrets and variables -> Actions and make sure the Variables tab is open
-1. Tap on "Create new organization variable" or "Create new repository variable", then add the name below and enter the value true. Unlike secrets variables are visible and can be edited.
+1. Tap on "Create new organization variable" or "Create new repository variable", then add the name below and enter the value true. Unlike secrets, variables are visible and can be edited.
     * `ENABLE_NUKE_CERTS`
 
 ## Validate repository secrets
@@ -133,7 +133,7 @@ Note 1 - If you previously built with Xcode, the `Names` listed below may be dif
 
 Note 2 - Depending on your build history, you may find some of the Identifiers are already configured - and you are just verifying the status; but in other cases, you will need to configure the Identifiers.
 
-1. Go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list) on the apple developer site.
+1. Go to [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list) on the Apple Developer site.
 1. For each of the following identifier names:
     * LoopCaregiver
     * LoopCaregiverWidgetExtension
@@ -141,7 +141,7 @@ Note 2 - Depending on your build history, you may find some of the Identifiers a
     * LoopCaregiverWatch
     * LoopCaregiverWatchWidgetExtension
 1. Click on the identifier's name.
-1. On the "App Groups" capabilies, click on the "Configure" button.
+1. On the "App Groups" capabilities, click on the "Configure" button.
 1. Select the "LoopCaregiver App Group"
 1. Click "Continue".
 1. Click "Save".
