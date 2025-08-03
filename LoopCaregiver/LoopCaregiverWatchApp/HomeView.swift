@@ -185,10 +185,13 @@ struct HomeView: View {
 #Preview {
     let composer = ServiceComposerPreviews()
     return NavigationStack {
-        let looper = composer.accountServiceManager.selectedLooper!
-        let looperService = composer.accountServiceManager.createLooperService(
-            looper: looper
-        )
-        HomeView(connectivityManager: composer.watchService, accountService: composer.accountServiceManager, looperService: looperService)
+        if let looper = try? composer.accountServiceManager.getLoopers().first {
+            let looperService = composer.accountServiceManager.createLooperService(
+                looper: looper
+            )
+            HomeView(connectivityManager: composer.watchService, accountService: composer.accountServiceManager, looperService: looperService)
+        } else {
+            Text("No looper!")
+        }
     }
 }
