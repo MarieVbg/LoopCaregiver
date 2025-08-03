@@ -53,6 +53,8 @@ struct HomeView: View {
             ToolbarItem(placement: .topBarLeading) {
                 // Use separate view to avoid the entire body from updating when remoteDataSource.updating changes
                 ToolbarButtonView(remoteDataSource: remoteDataSource, glucoseTimelineEntry: glucoseTimelineEntry)
+                // Workaround for iOS 26 Beta issue FB19330113
+                    .id(glucoseTimelineEntry)
             }
         }
         .onChange(of: scenePhase, { _, _ in
