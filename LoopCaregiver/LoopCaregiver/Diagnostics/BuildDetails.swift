@@ -90,7 +90,7 @@ class BuildDetails {
             return nil
         }
 
-        let dateString = String(profileNSString.substring(with: NSRange(range, in: profileNSString as String)))
+        let dateString = String(profileNSString[range])
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
