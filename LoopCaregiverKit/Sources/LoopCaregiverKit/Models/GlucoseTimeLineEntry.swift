@@ -119,7 +119,6 @@ public struct GlucoseTimelineValue: Hashable {
         hasher.combine(date)
     }
     
-    
     public static func previewsValue() -> GlucoseTimelineValue {
         var recentSamples = [NewGlucoseSample]()
         for index in stride(from: 100, to: 200, by: 10) {
